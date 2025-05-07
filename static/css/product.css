@@ -1,0 +1,36 @@
+.product-card{
+    background-color: gold;
+    border: 1px solid black;
+    padding: 2%;
+    height: 300px;
+    width: 100px;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.product-img-wrap{
+    height: 50%;
+    width: 100%;
+}
+.product-img-wrap img {
+    height: 100%;
+    width: 100%;
+}
+.product-down{
+    background-color: grey;
+
+}
+.buy-btn{
+    background-color: green;
+    cursor: pointer;
+}
+
+.sold-out-btn{
+    background-color: red;
+}
+button{
+    cursor: pointer;
+}

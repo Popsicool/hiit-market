@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %} Sign up {% endblock title %}
+
+{% block main %}
+<h1>Sign up</h1>
+<form action="" method="post">
+{% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" id='username' name="username" required><br><br>
+    <label for="email">Email</label>
+    <input type="email" id='email' name="email" required><br><br>
+    <label for="password">Password</label>
+    <input type="password" id='password' name="password" required><br><br>
+    <label for="cpassword">Confirm password</label>
+    <input type="password" id='cpassword' name="cpassword" required><br><br>
+    <label for="">Account Type</label> <br><br>
+    <select name="user_type" id="user_type">
+        <option value="BUYER">Buyer</option>
+        <option value="SELLER">Seller</option>
+    </select><br><br>
+    
+    <div class="seller-info" style="display: none;">
+        <label for="">Phone</label>
+        <input type="text" name="phone"><br><br>
+        <label for="">Brand Name</label><br><br>
+        <input type="text" name="brand"><br><br>
+        <label for="">Address</label><br><br>
+        <textarea name="address" id=""></textarea><br><br>
+        <label for="">Bank Name</label><br><br>
+        <input type="text" name="bank"><br><br>
+        <label for="">Account Number</label><br><br>
+        <input type="text" name="account_number">
+    </div>
+    <button>REGISTER</button>
+</form>
+
+<script>
+    let userType = document.querySelector("#user_type")
+    let sellerInfo = document.querySelector('.seller-info')
+    userType.addEventListener('change', () => {
+        if (userType.value == "SELLER"){
+            sellerInfo.style.display = "block"
+        }
+        else{
+            sellerInfo.style.display = "none"
+
+        }
+    })
+
+</script>
+{% endblock main %}

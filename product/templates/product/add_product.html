@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Product {% endblock title %}
+
+
+{% block main %}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="">Name</label><br>
+    <input type="text" name="name"><br>
+    <label for="">Quantity</label><br>
+    <input type="number" name="quantity"><br>
+    <label for="">Price</label><br>
+    <input type="number" name="price"><br>
+    <label for="">Description</label><br>
+    <textarea name="description" id=""></textarea><br>
+    <label for="">Picture</label><br>
+    <input type="file" name="picture"><br>
+    <button>Add</button>
+</form>
+
+{% endblock main %}
