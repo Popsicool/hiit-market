@@ -4,6 +4,7 @@
 {% block main %}
 
 <p>Welcome {{user.username}}</p>
+<p>Buga market place</p>
 {% if seller_details %}
     <a href="{% url 'add_product' %}"><button>Add Product</button></a>
     <h1>{{ seller_details.brand_name }}</h1>
